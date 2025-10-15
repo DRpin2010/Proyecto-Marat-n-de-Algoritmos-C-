@@ -1,13 +1,19 @@
-// Ejercicio 235
+// Ejercicio235.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Comparar dos directorios demo: listar archivos del directorio actual\n";
-system("ls -1");
+    int y;
+    cout << "Ejercicio 235: Ingrese año: ";
+    if(!(cin>>y)) return 0;
+    bool b = (y%4==0 && y%100!=0) || (y%400==0);
+    cout << (b?"Bisiesto\n":"No bisiesto\n");
 
     return 0;
 }

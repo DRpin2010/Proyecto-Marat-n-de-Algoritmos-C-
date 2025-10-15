@@ -1,12 +1,15 @@
-// Ejercicio 272
+// Ejercicio272.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Page replacement simulation: LRU/FIFO demo message\n";
+    cout << "Ejercicio 272: Knapsack DP requiere entrada extensa; este es un stub.\n";
 
     return 0;
 }

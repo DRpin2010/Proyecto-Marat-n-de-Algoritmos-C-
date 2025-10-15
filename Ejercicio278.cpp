@@ -1,14 +1,18 @@
-// Ejercicio 278
+// Ejercicio278.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Scripting engine stub: execute built-in commands 'ping'\n";
-string cmd; cin>>cmd;
-if(cmd=="ping") cout<<"pong\n";
+    double c;
+    cout << "Ejercicio 278: Ingrese grados Celsius: ";
+    if(!(cin>>c)) return 0;
+    cout << "Fahrenheit: " << (c * 9.0/5.0 + 32.0) << "\n";
 
     return 0;
 }

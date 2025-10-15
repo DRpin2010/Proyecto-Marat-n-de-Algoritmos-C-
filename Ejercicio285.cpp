@@ -1,12 +1,23 @@
-// Ejercicio 285
+// Ejercicio285.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Search ranking demo: sort terms by frequency (hardcoded)\n";
+    class Persona {
+    public:
+        string nombre; int edad;
+        Persona(string n,int e):nombre(n),edad(e){}
+        void saludar() const { cout << "Hola, soy "<<nombre<<" y tengo "<<edad<<" años.\n"; }
+    };
+    string n; int e;
+    cout<<"Ejercicio 285: nombre y edad: "; cin>>n>>e;
+    Persona p(n,e); p.saludar();
 
     return 0;
 }

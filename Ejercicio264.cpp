@@ -1,15 +1,19 @@
-// Ejercicio 264
+// Ejercicio264.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "XML minimal parser demo: busca etiqueta <tag>content</tag>\n";
-string s; getline(cin,s);
-size_t p1=s.find('<'); size_t p2=s.find('>');
-if(p1!=string::npos && p2!=string::npos) cout<<s.substr(p1,p2-p1+1)<<"\n";
+    int top=-1; const int MAX=100;
+    int st[MAX];
+    cout << "Ejercicio 264: push 3 valores:\n";
+    for(int k=0;k<3;k++){ int v; cin>>v; st[++top]=v; }
+    cout << "Pop: "; while(top>=0) cout<<st[top--]<<" "; cout<<"\n";
 
     return 0;
 }

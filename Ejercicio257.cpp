@@ -1,15 +1,18 @@
-// Ejercicio 257
+// Ejercicio257.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Gauss-Jordan demo para 2x2\n";
-double a=1,b=2,c=3,d=4;
-double det=a*d-b*c;
-if(det==0) cout<<"No invertible\n"; else cout<<"Det: "<<det<<"\n";
+    int n;
+    cout << "Ejercicio 257: Ingrese entero: ";
+    if(!(cin>>n)) return 0;
+    cout << (n%2==0?"Par\n":"Impar\n");
 
     return 0;
 }

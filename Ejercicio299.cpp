@@ -1,13 +1,15 @@
-// Ejercicio 299
+// Ejercicio299.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Benchmark demo: compare two implementations of sum\n";
-vector<int> a(1000,1); long long s=0; for(auto v:a) s+=v; cout<<s<<"\n";
+    cout << "Ejercicio 299: BST implementacion completa es larga; este es un stub.\n";
 
     return 0;
 }

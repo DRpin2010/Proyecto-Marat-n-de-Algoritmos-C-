@@ -1,17 +1,22 @@
-// Ejercicio 275
+// Ejercicio275.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <sstream>
+#include <unordered_map>
+
 using namespace std;
 
 int main() {
-
-cout << "Integrity check demo: compute simple sum of bytes of file\n";
-string fn; cin >> fn;
-ifstream f(fn, ios::binary);
-unsigned long sum=0; char c;
-while(f.get(c)) sum += (unsigned char)c;
-cout << "Checksum: " << sum << "\n";
+    string line; getline(cin, line);
+    istringstream iss(line);
+    unordered_map<string,int> cnt;
+    string w;
+    while(iss>>w) cnt[w]++;
+    for(auto &kv:cnt) cout<<kv.first<<":"<<kv.second<<"\n";
 
     return 0;
 }

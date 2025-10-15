@@ -1,15 +1,21 @@
-// Ejercicio 243
+// Ejercicio243.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "App inventario demo: agrega item y muestra lista\n";
-vector<string> inv; string s; cin.ignore();
-getline(cin,s); inv.push_back(s);
-cout << "Inventario:\n"; for(auto &it:inv) cout<<it<<"\n";
+    struct Node { int val; Node* next; Node(int v):val(v),next(nullptr){} };
+    Node* head=nullptr;
+    head = new Node(1); head->next = new Node(2);
+    cout << "Ejercicio 243: Lista: ";
+    for(Node* p=head;p;p=p->next) cout<<p->val<<" ";
+    cout<<"\n";
+    while(head){ Node* t=head; head=head->next; delete t; }
 
     return 0;
 }

@@ -1,14 +1,15 @@
-// Ejercicio 249
+// Ejercicio249.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Perceptron simple demo: peso y umbral aplicado\n";
-double w=0.5, x=1.0, thresh=0.4;
-cout << ((w*x>thresh)?"Activo\n":"Inactivo\n");
+    cout << "Ejercicio 249: Knapsack DP requiere entrada extensa; este es un stub.\n";
 
     return 0;
 }

@@ -1,14 +1,22 @@
-// Ejercicio 252
+// Ejercicio252.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <sstream>
+#include <unordered_map>
+
 using namespace std;
 
 int main() {
-
-cout << "Word-wrap simple: dividir texto en lineas de max 20 chars\n";
-string s; getline(cin,s);
-for(size_t i=0;i<s.size(); i+=20) cout<<s.substr(i,20)<<"\n";
+    string line; getline(cin, line);
+    istringstream iss(line);
+    unordered_map<string,int> cnt;
+    string w;
+    while(iss>>w) cnt[w]++;
+    for(auto &kv:cnt) cout<<kv.first<<":"<<kv.second<<"\n";
 
     return 0;
 }

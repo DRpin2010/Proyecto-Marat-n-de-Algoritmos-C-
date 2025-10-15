@@ -1,12 +1,19 @@
-// Ejercicio 233
+// Ejercicio233.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Cond var demo requires threading; showing message instead.\n";
+    string name;
+    int age;
+    cout << "Ejercicio 233: Ingrese nombre: "; cin >> ws; getline(cin, name);
+    cout << "Ingrese edad: "; cin >> age;
+    cout << "Hola " << name << ", tienes " << age << " años.\n";
 
     return 0;
 }

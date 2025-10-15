@@ -1,12 +1,18 @@
-// Ejercicio 254
+// Ejercicio254.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Huffman adaptativo stub: demo message\n";
+    double r;
+    cout << "Ejercicio 254: Ingrese radio: ";
+    if(!(cin>>r)) return 0;
+    cout << "Area: " << M_PI * r * r << "\n";
 
     return 0;
 }

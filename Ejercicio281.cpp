@@ -1,13 +1,19 @@
-// Ejercicio 281
+// Ejercicio281.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Scoreboard demo: guardar record en archivo 'scores.txt'\n";
-ofstream f("scores.txt", ios::app); f<<"player1 "<<100<<"\n"; f.close();
+    int y;
+    cout << "Ejercicio 281: Ingrese año: ";
+    if(!(cin>>y)) return 0;
+    bool b = (y%4==0 && y%100!=0) || (y%400==0);
+    cout << (b?"Bisiesto\n":"No bisiesto\n");
 
     return 0;
 }

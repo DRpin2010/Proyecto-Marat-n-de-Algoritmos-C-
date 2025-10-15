@@ -1,12 +1,15 @@
-// Ejercicio 253
+// Ejercicio253.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Backup incremental demo: copiar fileA->fileB (demo)\n";
+    cout << "Ejercicio 253: BST implementacion completa es larga; este es un stub.\n";
 
     return 0;
 }

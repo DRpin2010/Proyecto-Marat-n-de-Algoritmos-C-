@@ -1,16 +1,19 @@
-// Ejercicio 210
+// Ejercicio210.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-// Snapshots simples: copia archivo de texto a snapshot.txt
-ofstream f("snapshot.txt");
-f << "Snapshot de datos a fecha: demo\n";
-f.close();
-cout << "Snapshot creado: snapshot.txt\n";
+    string name;
+    int age;
+    cout << "Ejercicio 210: Ingrese nombre: "; cin >> ws; getline(cin, name);
+    cout << "Ingrese edad: "; cin >> age;
+    cout << "Hola " << name << ", tienes " << age << " años.\n";
 
     return 0;
 }

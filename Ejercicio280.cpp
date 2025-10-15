@@ -1,12 +1,18 @@
-// Ejercicio 280
+// Ejercicio280.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "LZW compression stub: demo message\n";
+    int n;
+    cout << "Ejercicio 280: Ingrese entero: ";
+    if(!(cin>>n)) return 0;
+    cout << (n%2==0?"Par\n":"Impar\n");
 
     return 0;
 }

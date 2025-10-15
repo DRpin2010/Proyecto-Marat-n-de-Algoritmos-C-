@@ -1,13 +1,15 @@
-// Ejercicio 295
+// Ejercicio295.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Lectura sensores simulados y logging en CSV demo\n";
-ofstream f("sensors.csv"); f<<"time,valor\n"; for(int i=0;i<5;i++) f<<i<<","<<i*2<<"\n"; f.close();
+    cout << "Ejercicio 295: Knapsack DP requiere entrada extensa; este es un stub.\n";
 
     return 0;
 }

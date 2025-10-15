@@ -1,12 +1,18 @@
-// Ejercicio 255
+// Ejercicio255.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-    cout << "Utilidades matematicas: gcd(48,18)=";
-    body += "auto gcd = [](int a,int b){ while(b){int t=b;b=a%b;a=t;} return a; };
-    cout << gcd(48,18) << "\n";";
+    double c;
+    cout << "Ejercicio 255: Ingrese grados Celsius: ";
+    if(!(cin>>c)) return 0;
+    cout << "Fahrenheit: " << (c * 9.0/5.0 + 32.0) << "\n";
+
     return 0;
 }

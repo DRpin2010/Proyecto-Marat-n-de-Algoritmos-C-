@@ -1,17 +1,22 @@
-// Ejercicio 206
+// Ejercicio206.cpp
 #include <iostream>
 #include <vector>
-#include <functional>
+#include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <sstream>
+#include <unordered_map>
+
 using namespace std;
 
 int main() {
-
-// Callbacks usando std::function: ejecutar funciones registradas
-#include <functional>
-vector<function<void()>> callbacks;
-callbacks.push_back([](){ cout << "Callback 1 ejecutado\n"; });
-callbacks.push_back([](){ cout << "Callback 2 ejecutado\n"; });
-for(auto &cb: callbacks) cb();
+    string line; getline(cin, line);
+    istringstream iss(line);
+    unordered_map<string,int> cnt;
+    string w;
+    while(iss>>w) cnt[w]++;
+    for(auto &kv:cnt) cout<<kv.first<<":"<<kv.second<<"\n";
 
     return 0;
 }

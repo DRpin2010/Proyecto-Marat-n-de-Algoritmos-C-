@@ -1,16 +1,18 @@
-// Ejercicio 219
+// Ejercicio219.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Simulador 1D de colisiones simple: dos masas que intercambian velocidad\n";
-double v1=1.0, v2=-1.0;
-cout << "Antes v1="<<v1<<" v2="<<v2<<"\n";
-swap(v1,v2);
-cout << "Despues v1="<<v1<<" v2="<<v2<<"\n";
+    const int CAP=5; int q[CAP]; int head=0, tail=0, sz=0;
+    cout << "Ejercicio 219: insertar 3 enteros: ";
+    for(int k=0;k<3;k++){ int v; cin>>v; if(sz<CAP){ q[tail]=v; tail=(tail+1)%CAP; sz++; } }
+    cout << "Extraer: "; while(sz){ cout<<q[head]<<" "; head=(head+1)%CAP; sz--; } cout<<"\n";
 
     return 0;
 }

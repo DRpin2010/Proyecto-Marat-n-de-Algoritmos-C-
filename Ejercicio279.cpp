@@ -1,15 +1,19 @@
-// Ejercicio 279
+// Ejercicio279.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Job queue demo: push jobs and process sequentially\n";
-queue<string> q;
-q.push("job1"); q.push("job2");
-while(!q.empty()){ cout<<"Processing "<<q.front()<<"\n"; q.pop(); }
+    string name;
+    int age;
+    cout << "Ejercicio 279: Ingrese nombre: "; cin >> ws; getline(cin, name);
+    cout << "Ingrese edad: "; cin >> age;
+    cout << "Hola " << name << ", tienes " << age << " años.\n";
 
     return 0;
 }

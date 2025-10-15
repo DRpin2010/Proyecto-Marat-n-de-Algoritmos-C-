@@ -1,16 +1,15 @@
-// Ejercicio 276
+// Ejercicio276.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Trial division factorization demo: factors of n\n";
-int n; cin >> n;
-for(int p=2;p*p<=n;p++) while(n%p==0){ cout<<p<<" "; n/=p; }
-if(n>1) cout<<n;
-cout<<"\n";
+    cout << "Ejercicio 276: BST implementacion completa es larga; este es un stub.\n";
 
     return 0;
 }

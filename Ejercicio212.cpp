@@ -1,14 +1,19 @@
-// Ejercicio 212
+// Ejercicio212.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Motor de reglas simple: si x>10 imprime mensaje.\n";
-int x; cout << "X?: "; cin >> x;
-if(x>10) cout << "Regla activada: x>10\n"; else cout << "No activada\n";
+    int y;
+    cout << "Ejercicio 212: Ingrese año: ";
+    if(!(cin>>y)) return 0;
+    bool b = (y%4==0 && y%100!=0) || (y%400==0);
+    cout << (b?"Bisiesto\n":"No bisiesto\n");
 
     return 0;
 }

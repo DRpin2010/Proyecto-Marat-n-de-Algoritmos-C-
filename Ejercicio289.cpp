@@ -1,16 +1,21 @@
-// Ejercicio 289
+// Ejercicio289.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "RPN calculator demo: evaluate '3 4 +' from stdin\n";
-double a,b; char op;
-if(cin>>a>>b>>op){
-  if(op=='+') cout<<a+b<<"\n";
-}
+    struct Node { int val; Node* next; Node(int v):val(v),next(nullptr){} };
+    Node* head=nullptr;
+    head = new Node(1); head->next = new Node(2);
+    cout << "Ejercicio 289: Lista: ";
+    for(Node* p=head;p;p=p->next) cout<<p->val<<" ";
+    cout<<"\n";
+    while(head){ Node* t=head; head=head->next; delete t; }
 
     return 0;
 }

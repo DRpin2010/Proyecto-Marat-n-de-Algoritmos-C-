@@ -1,17 +1,18 @@
-// Ejercicio 286
+// Ejercicio286.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <functional>
+
 using namespace std;
 
 int main() {
-
-cout << "Union-Find implementation and Kruskal demo\n";
-int n=4; vector<int> p(n); iota(p.begin(),p.end(),0);
-function<int(int)> findp = [&](int x){ return p[x]==x?x:p[x]=findp(p[x]); };
-auto unite=[&](int a,int b){ a=findp(a); b=findp(b); if(a!=b) p[b]=a; };
-unite(0,1); unite(2,3);
-cout<<"UF demo done\n";
+    function<long long(int)> fact = [&](int n)->long long{ if(n<=1) return 1; return n*fact(n-1); };
+    int n; cout << "Ejercicio 286: Ingrese n: "; if(!(cin>>n)) return 0;
+    cout << "Factorial: " << fact(n) << "\n";
 
     return 0;
 }

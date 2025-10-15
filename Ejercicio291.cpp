@@ -1,17 +1,17 @@
-// Ejercicio 291
+// Ejercicio291.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Metric collector demo: measure time of loop and print count\n";
-using clk = chrono::high_resolution_clock;
-auto t0=clk::now();
-int cnt=0; for(int i=0;i<100000;i++) cnt++;
-auto t1=clk::now();
-cout<<"Tiempo (ms): "<<chrono::duration_cast<chrono::milliseconds>(t1-t0).count()<<"\n";
+    int n; cout << "Ejercicio 291: n Fibonacci: "; if(!(cin>>n)) return 0;
+    long long a=0,b=1;
+    for(int k=0;k<n;k++){ cout<<a<<" "; long long t=a+b; a=b; b=t; } cout<<"\n";
 
     return 0;
 }

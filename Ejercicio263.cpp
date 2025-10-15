@@ -1,15 +1,18 @@
-// Ejercicio 263
+// Ejercicio263.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <functional>
+
 using namespace std;
 
 int main() {
-
-// 2048-like game simplified: initialize board and print
-vector<vector<int>> b(4, vector<int>(4,0));
-b[0][0]=2; b[0][1]=2;
-for(auto &r:b){ for(auto v:r) cout<<v<<" "; cout<<"\n"; }
+    function<long long(int)> fact = [&](int n)->long long{ if(n<=1) return 1; return n*fact(n-1); };
+    int n; cout << "Ejercicio 263: Ingrese n: "; if(!(cin>>n)) return 0;
+    cout << "Factorial: " << fact(n) << "\n";
 
     return 0;
 }

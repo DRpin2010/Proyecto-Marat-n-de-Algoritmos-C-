@@ -1,14 +1,18 @@
-// Ejercicio 234
+// Ejercicio234.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Parser booleano simple: evalua 'true' o 'false' ingresado\n";
-string s; cin >> s;
-cout << ((s=="true")?"Verdadero\n":"Falso\n");
+    int n;
+    cout << "Ejercicio 234: Ingrese entero: ";
+    if(!(cin>>n)) return 0;
+    cout << (n%2==0?"Par\n":"Impar\n");
 
     return 0;
 }

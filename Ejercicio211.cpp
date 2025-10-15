@@ -1,15 +1,18 @@
-// Ejercicio 211
+// Ejercicio211.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Conversor de fechas simple: solo muestra dia/mes/anio recibido.\n";
-int d,m,y;
-cout << "Ingrese d m y (ej: 1 1 2025): ";
-if(cin>>d>>m>>y) cout << "Fecha: " << d << "/" << m << "/" << y << "\n";
+    int n;
+    cout << "Ejercicio 211: Ingrese entero: ";
+    if(!(cin>>n)) return 0;
+    cout << (n%2==0?"Par\n":"Impar\n");
 
     return 0;
 }

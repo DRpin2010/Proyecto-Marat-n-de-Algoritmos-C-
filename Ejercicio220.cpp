@@ -1,13 +1,21 @@
-// Ejercicio 220
+// Ejercicio220.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Parser AST simple: convertir 1+2 en nodo y calcular resultado\n";
-cout << "Resultado 1+2 = " << (1+2) << "\n";
+    struct Node { int val; Node* next; Node(int v):val(v),next(nullptr){} };
+    Node* head=nullptr;
+    head = new Node(1); head->next = new Node(2);
+    cout << "Ejercicio 220: Lista: ";
+    for(Node* p=head;p;p=p->next) cout<<p->val<<" ";
+    cout<<"\n";
+    while(head){ Node* t=head; head=head->next; delete t; }
 
     return 0;
 }

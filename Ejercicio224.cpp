@@ -1,29 +1,22 @@
-// Ejercicio 224
+// Ejercicio224.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <functional>
+
 using namespace std;
 
 int main() {
-
-    // Dijkstra simple con priority_queue
-    int N=4;
-    vector<vector<pair<int,int>>> g(N);
-    g[0].push_back({1,1}); g[1].push_back({2,1}); g[2].push_back({3,1});
-    vector<int> dist(N,1e9); dist[0]=0;
-    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
-    pq.push({0,0});
-    while(!pq.empty()){
-        auto [d,u]=pq.top(); pq.pop();
-        for(auto &e:g[u]){
-            int v=e.first,w=e.second;
-            if(dist[v]>d+w){ dist[v]=d+w; pq.push({dist[v],v}); }
-        }
-    }
-    cout << "Distancias desde 0: ";
-    for(int i=0;i<N;i++) cout<<dist[i]<<" ";
-    cout<<"
-";
+    int n; cin>>n; vector<int> a(n); for(int i2=0;i2<n;i2++) cin>>a[i2];
+    function<void(int,int)> qs = [&](int l,int r){ if(l>=r) return; int p=a[(l+r)/2], i=l, j=r;
+        while(i<=j){ while(a[i]<p) i++; while(a[j]>p) j--; if(i<=j){ swap(a[i],a[j]); i++; j--; } }
+        if(l<j) qs(l,j); if(i<r) qs(i,r);
+    };
+    qs(0,n-1);
+    for(auto x:a) cout<<x<<" "; cout<<"\n";
 
     return 0;
 }

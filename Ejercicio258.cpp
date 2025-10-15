@@ -1,16 +1,19 @@
-// Ejercicio 258
+// Ejercicio258.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Analizador de logs demo: cuenta lineas de archivo especificado\n";
-string fname; cin >> fname;
-ifstream f(fname); string line; int cnt=0;
-while(getline(f,line)) cnt++;
-cout << "Lineas: " << cnt << "\n";
+    int y;
+    cout << "Ejercicio 258: Ingrese año: ";
+    if(!(cin>>y)) return 0;
+    bool b = (y%4==0 && y%100!=0) || (y%400==0);
+    cout << (b?"Bisiesto\n":"No bisiesto\n");
 
     return 0;
 }

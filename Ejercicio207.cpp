@@ -1,16 +1,15 @@
-// Ejercicio 207
+// Ejercicio207.cpp
 #include <iostream>
-#include <map>
-#include <utility>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-// Matriz dispersa en map<pair<int,int>,double>
-cout << "Ejemplo matriz sparse 2x2 con un valor no nulo\n";
-map<pair<int,int>,double> m;
-m[{0,1}] = 3.5;
-for(auto &kv: m) cout << "(" << kv.first.first << "," << kv.first.second << ")=" << kv.second << "\n";
+    cout << "Ejercicio 207: BST implementacion completa es larga; este es un stub.\n";
 
     return 0;
 }

@@ -1,18 +1,23 @@
-// Ejercicio 216
+// Ejercicio216.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-// Template: motor de plantillas que reemplace {{var}} en texto
-string s;
-cout << "Ingrese texto con {{name}}: ";
-getline(cin,s);
-size_t p = s.find("{{name}}");
-if(p!=string::npos) s.replace(p,8,"Usuario");
-cout << s << "\n";
+    class Persona {
+    public:
+        string nombre; int edad;
+        Persona(string n,int e):nombre(n),edad(e){}
+        void saludar() const { cout << "Hola, soy "<<nombre<<" y tengo "<<edad<<" años.\n"; }
+    };
+    string n; int e;
+    cout<<"Ejercicio 216: nombre y edad: "; cin>>n>>e;
+    Persona p(n,e); p.saludar();
 
     return 0;
 }

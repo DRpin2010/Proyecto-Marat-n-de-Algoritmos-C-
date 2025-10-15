@@ -1,12 +1,20 @@
-// Ejercicio 236
+// Ejercicio236.cpp
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
-cout << "Motor de recomendaciones demo: similitud coseno simplificado\n";
+    int a,b;
+    cout << "Ejercicio 236: Ingrese a y b: ";
+    if(!(cin>>a>>b)) return 0;
+    auto swap_ptr = [](int *x,int *y){ int t=*x; *x=*y; *y=t; };
+    swap_ptr(&a,&b);
+    cout << "Intercambiados: a="<<a<<" b="<<b<<"\n";
 
     return 0;
 }
